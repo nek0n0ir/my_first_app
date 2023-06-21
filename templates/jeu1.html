@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeu des capitales</title>
+</head>
+<body>
+    <h1>Quelle est la capitale de {{ nom_pays }} ?</h1>
+     <img src="{{ drapeau }}" alt="Drapeau du pays">
+    <form action="{{ url_for('verif1') }}" method="post">
+        <input type="hidden" name="nom_pays" value="{{ nom_pays }}">
+        <input type="text" name="capitale" placeholder="Capitale" autocomplete="off">
+        <input type="submit" value="Vérifier">
+    </form>
+</body>
+</html>
