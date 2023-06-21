@@ -57,7 +57,7 @@ def jeu2():
     fusion = cursor.fetchall()
 
 
-    # Sélectionner un pays aleatoire
+    # Selectionner un pays aleatoire
     pays_aleatoire = random.choice(fusion)
     conn.close()
 
