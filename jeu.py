@@ -17,14 +17,14 @@ def jeu1():
     fusion = cursor.fetchall()
 
 
-    # Sélectionner un pays aléatoire
+    # Selectionner un pays aléatoire
     pays_aleatoire = random.choice(fusion)
     conn.close()
 
     nom_pays = pays_aleatoire[0]
     drapeau = pays_aleatoire[3]
 
-    # Rediriger vers la route de vérification avec le nom du pays en tant que paramètre
+    # Rediriger vers la route de verification avec le nom du pays en tant que parametre
     return render_template('jeu1.html', nom_pays=nom_pays, drapeau=drapeau)
 
 @app.route('/verif1', methods=['POST'])
@@ -38,7 +38,7 @@ def verif1():
     capital_reel = cursor.fetchone()[0]
     conn.close()
 
-    # Normalisation des chaînes de caractères en enlevant les accents
+    # Normalisation des chaines de caracteres en enlevant les accents
     capital_saisie = unidecode(capital_saisie)
     capital_reel = unidecode(capital_reel)
 
@@ -57,14 +57,14 @@ def jeu2():
     fusion = cursor.fetchall()
 
 
-    # Sélectionner un pays aléatoire
+    # Sélectionner un pays aleatoire
     pays_aleatoire = random.choice(fusion)
     conn.close()
 
     nom_pays = pays_aleatoire[0]
     drapeau = pays_aleatoire[3]
 
-    # Rediriger vers la route de vérification avec le nom du pays en tant que paramètre
+    # Rediriger vers la route de verification avec le nom du pays en tant que parametre
     return render_template('jeu2.html', nom_pays=nom_pays, drapeau=drapeau)
 
 @app.route('/verif2', methods=['POST'])
@@ -78,7 +78,7 @@ def verif2():
     pays_reel = cursor.fetchone()[0]
     conn.close()
 
-    # Normalisation des chaînes de caractères en enlevant les accents
+    # Normalisation des chaines de caracteres en enlevant les accents
     pays_saisie = unidecode(pays_saisie)
     pays_reel = unidecode(pays_reel)
 
